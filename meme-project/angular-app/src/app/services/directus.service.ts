@@ -37,21 +37,21 @@ export class DirectusService {
 
   // Method to get user profiles
   getUserProfiles(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/items/profiles`);
+    return this.http.get(`${this.apiUrl}/items/profile`);
   }
 
   // Method to create a new user profile
   createUserProfile(profileData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/items/profiles`, profileData);
+    return this.http.post(`${this.apiUrl}/items/profile`, profileData);
   }
 
   // Method to update an existing user profile
   updateUserProfile(id: number, profileData: any): Observable<any> {
-    return this.http.patch(`${this.apiUrl}/items/profiles/${id}`, profileData);
+    return this.http.patch(`${this.apiUrl}/items/profile/${id}`, profileData);
   }
 
   // Method to delete a user profile
   deleteUserProfile(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/items/profiles/${id}`);
+    return this.http.delete(`${this.apiUrl}/items/profile/${id}`);
   }
 }
